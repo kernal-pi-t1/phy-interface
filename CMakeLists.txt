@@ -10,12 +10,11 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
-# Uncomment and add your interface files:
-# rosidl_generate_interfaces(${PROJECT_NAME}
-#   "msg/Example.msg"
-#   "srv/Example.srv"
-#   "action/Example.action"
-#   DEPENDENCIES std_msgs geometry_msgs
-# )
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "srv/Json.srv"
+  "srv/GetPose.srv"
+  "action/Move.action"
+  DEPENDENCIES std_msgs
+)
 
 ament_package()
